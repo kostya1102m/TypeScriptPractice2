@@ -11,9 +11,9 @@ function GroupGrid( { data }: GroupProps) {
     const rows: GridRowsProp = data;
     const columns: GridColDef[] = [
         { field: 'Группа', headerName: 'Группа', flex: 1 },
-        { field: 'Минимальная высота', flex: 0.5 },
-        { field: 'Максимальная высота', flex: 0.5 },
-        { field: 'Средняя высота', flex: 0.5 },
+        { field: 'Минимальная стоимость активов', flex: 0.5 },
+        { field: 'Максимальная стоимость активов', flex: 0.5 },
+        { field: 'Средняя стоимость активов', flex: 0.5 },
     ];
     return (
         <Container

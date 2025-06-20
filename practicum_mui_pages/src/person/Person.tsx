@@ -1,16 +1,16 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import BuildingInfo from "./components/BuildingInfo";
+import PersonInfo from "./components/PersonInfo";
 
 
-function Building () {
+function Person () {
     return (
         <>
             <Navbar active=""/> 
-            <BuildingInfo />
+            <PersonInfo />
             <Footer /> 
         </>
     );
 }
 
-export default Building;
+export default Person;

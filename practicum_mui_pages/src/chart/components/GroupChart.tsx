@@ -18,9 +18,9 @@ function GroupChart({ data }: GroupProps) {
     };
 
     const [series, setSeries] = React.useState({
-        'Максимальная высота': true,
-        'Средняя высота': false,
-        'Минимальная высота': false
+        'Максимальная стоимость активов': true,
+        'Средняя стоимость активов': false,
+        'Минимальная стоимость активов': false
     });
 
     const [isBar, setIsBar] = React.useState(true);
@@ -40,7 +40,7 @@ function GroupChart({ data }: GroupProps) {
 
 
     return (
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
             {isBar ? (
                 <BarChart
                     dataset={data}

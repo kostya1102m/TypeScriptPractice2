@@ -1,13 +1,13 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import BuildingsGrid from "./components/BuildingsGrid";
+import PersonsGrid from "./components/PersonsGrid";
 
 
 function List(){
     return (
         <div>
             <Navbar active="2"/>
-            <BuildingsGrid />
+            <PersonsGrid />
             <Footer />
         </div>
     );

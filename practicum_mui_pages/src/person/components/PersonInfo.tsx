@@ -11,9 +11,9 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
     textAlign: "justify",
 }));
 
-function Building() {
+function Person() {
     const { id }: any = useParams();
-    const building = structures[id];
+    const billioner = structures[id];
     return (
         <Container maxWidth="xl">
             <Breadcrumbs
@@ -36,7 +36,7 @@ function Building() {
                         fontWeight: 'bold',
                     }}
                 >
-                    {building.title}
+                    {billioner.title}
                 </StyledTypography>
             </Breadcrumbs>
             <Grid container spacing={{ xs: 3, md: 6 }}>
@@ -44,7 +44,7 @@ function Building() {
                     display: 'flex',
                     flexDirection: 'column',
                     width: '100%',
-                    borderRadius: 0,
+                    borderRadius: 2,
                     marginTop: 2
                 }}>
                     <Box sx={{
@@ -57,28 +57,38 @@ function Building() {
 
                     <CardContent>
                         <StyledTypography gutterBottom variant="h5" sx={{ textAlign: "center" }}>
-                            {building.title}
+                            {billioner.title}
                         </StyledTypography>
 
 
                     </CardContent>
                     <CardMedia
                         component="img"
-                        alt={building.title}
-                        image={building.img}
+                        alt={billioner.title}
+                        image={billioner.img}
                         sx={{
                             width: 'auto',
                             maxWidth: '100%',
                             maxHeight: '450px',
                             objectFit: 'contain',
+                            borderRadius: '10px',
+                            boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+                            marginBottom: '20px'
                         }}
                     />
 
                     <CardContent>
                         <Grid container spacing={2}>
-                            {building.description.map((item, ind) => (
-                                <Grid size={{ xs: 12, md: 6 }} key={ind}>
-                                    <StyledTypography variant="body2">
+                            {billioner.description.map((item, ind) => (
+                                <Grid size={{ xs: 12, md: 12 }} key={ind}>
+                                    <StyledTypography 
+                                        variant="body2"
+                                        sx={{
+                                            margin: '0 auto',
+                                            marginBottom: '10px',
+                                            textAlign: "center"
+                                        }}
+                                        >
                                         {item}
                                     </StyledTypography>
                                 </Grid>
@@ -92,4 +102,4 @@ function Building() {
     );
 }
 
-export default Building;
+export default Person;

@@ -101,7 +101,7 @@ function Navbar({ active }: ComponentProps) {
                                     px: 2,
                                 }}
                             >
-                                Список зданий
+                                Список миллиардеров
                             </Button>
                         </Link>
                         <Link 

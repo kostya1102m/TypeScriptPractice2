@@ -1,12 +1,12 @@
 import Main from "./main/Main";
 import List from "./list/List";
-import Building from "./building/Building";
+import Person from "./person/Person";
 import Chart from "./chart/Chart";
 function App() {
   return (
     <>
       <List />
-      <Building/>
+      <Person/>
       <Chart/>
     </>
   );

@@ -10,10 +10,10 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import GroupGrid from "./components/GroupGrid";
 import GroupChart from "./components/GroupChart";
-import { years, countries, types } from "./groupdata";
+import { years, countries, industries } from "./groupdata";
 import { Group } from '@mui/icons-material';
 
-type tSelect = "Страна" | "Год" | "Тип";
+type tSelect = "Возраст" | "Страна" | "Индустрия";
 
 function Chart() {
 
@@ -26,10 +26,10 @@ function Chart() {
 
         if (event.target.value === "Страна") {
             setGroupData(countries);
-        } else if (event.target.value === "Год") {
+        } else if (event.target.value === "Индустрия") {
+            setGroupData(industries);
+        } else if (event.target.value === "Возраст") {
             setGroupData(years);
-        } else if (event.target.value === "Тип") {
-            setGroupData(types);
         }
     };
 
@@ -51,9 +51,9 @@ function Chart() {
                         label="Группировать по"
                         onChange={ handleChange }
                     >
+                        <MenuItem value="Индустрия">Индустрии</MenuItem>
+                        <MenuItem value="Возраст">Возрасту</MenuItem>
                         <MenuItem value="Страна">Стране</MenuItem>
-                        <MenuItem value="Год"> Году</MenuItem>
-                        <MenuItem value="Тип"> Типу</MenuItem>
                     </Select>
                 </FormControl>
             </Box>

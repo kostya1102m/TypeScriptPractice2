@@ -8,9 +8,9 @@ import FormLabel from '@mui/material/FormLabel';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 type tSeries = {
-    'Максимальная высота': boolean,
-    'Средняя высота': boolean,
-    'Минимальная высота': boolean,
+    'Максимальная стоимость активов': boolean,
+    'Средняя стоимость активов': boolean,
+    'Минимальная стоимость активов': boolean,
 }
 type CheckboxProps = {
     series: tSeries;
@@ -76,26 +76,26 @@ function SettingChart({ series, setSeries, isBar, setIsBar }: CheckboxProps) {
                 <FormControlLabel
                     control={
                         <Checkbox
-                            checked={series["Максимальная высота"]}
+                            checked={series["Максимальная стоимость активов"]}
                             onChange={handleChange}
-                            name="Максимальная высота" />
+                            name="Максимальная стоимость активов" />
                     }
-                    label="максимальную высоту" />
+                    label="максимальную стоимость" />
                 <FormControlLabel
                     control={
                         <Checkbox
-                            checked={series["Средняя высота"]}
+                            checked={series["Средняя стоимость активов"]}
                             onChange={handleChange}
-                            name="Средняя высота" />}
-                    label="среднюю высоту" />
+                            name="Средняя стоимость активов" />}
+                    label="среднюю стоимость" />
                 <FormControlLabel
 
                     control={
                         <Checkbox
-                            checked={series["Минимальная высота"]}
+                            checked={series["Минимальная стоимость активов"]}
                             onChange={handleChange}
-                            name="Минимальная высота" />}
-                    label="минимальную высоту" />
+                            name="Минимальная стоимость активов" />}
+                    label="минимальную стоимость" />
             </FormControl>
         </Stack>
     )

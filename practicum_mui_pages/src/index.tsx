@@ -12,7 +12,7 @@ import {
 
 import List from './list/List';
 import Main from './main/Main';
-import Building from './building/Building';
+import Person from './person/Person';
 import Chart from './chart/Chart';
 
 const router = createBrowserRouter([
@@ -25,8 +25,8 @@ const router = createBrowserRouter([
     element: <Main />,
   },
   {
-    path: "/building/:id",
-    element: <Building />
+    path: "/person/:id",
+    element: <Person />
   },
   {
     path: "/chart",
