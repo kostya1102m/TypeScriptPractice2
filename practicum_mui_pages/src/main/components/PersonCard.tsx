@@ -67,7 +67,10 @@ function PersonCard({ billioner, index }: ComponentProps) {
 
                     </Typography>
                     {billioner.description.map((item, ind) => (
-                        <StyledTypography key={ind} variant="body2">
+                        <StyledTypography key={ind} 
+                            variant="body2"
+                            fontSize="16px"
+                            >
                             {item}
                         </StyledTypography>
                     ))

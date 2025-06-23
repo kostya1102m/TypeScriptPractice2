@@ -10,10 +10,10 @@ type GroupProps = {
 function GroupGrid( { data }: GroupProps) {
     const rows: GridRowsProp = data;
     const columns: GridColDef[] = [
-        { field: 'Группа', headerName: 'Группа', flex: 1 },
-        { field: 'Минимальная стоимость активов', flex: 0.5 },
-        { field: 'Максимальная стоимость активов', flex: 0.5 },
-        { field: 'Средняя стоимость активов', flex: 0.5 },
+        { field: 'Группа', headerName: 'Группа', flex: 0.5 },
+        { field: 'Минимальная стоимость активов', flex: 1 },
+        { field: 'Максимальная стоимость активов', flex: 1 },
+        { field: 'Средняя стоимость активов', flex: 1 },
     ];
     return (
         <Container
